@@ -1,10 +1,15 @@
 function initDataTable() {
   let devilColumns = []
   titleList.map((title, index) => {
-    if(index === 2) {
-      return devilColumns.push({"title": title, "data": title, 'className': 'text-left',})
+    let tableTitle = title
+    if(title.indexOf('내성') > -1) {
+      tableTitle = title.slice(0,-2)
     }
-    devilColumns.push({"title": title, "data": title, 'className': 'text-center',})
+    
+    if(index === 2) {
+      return devilColumns.push({"title": tableTitle, "data": title, 'className': 'text-left',})
+    }
+    devilColumns.push({"title": tableTitle, "data": title, 'className': 'text-center',})
   })
 
   $.fn.dataTable.enum(['약', '-', '내', '무', '반', '흡']);
