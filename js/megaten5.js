@@ -17,7 +17,6 @@ function initDataTable() {
   $('#devil_list-table').DataTable({
     paging: false,
     info: false,
-    searching: false,
     scrollCollapse: true,
       order: [[ 1, "desc" ]],
       data: getData(),
