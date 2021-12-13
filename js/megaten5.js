@@ -1,11 +1,11 @@
 function initDataTable() {
-  $('#davil_tr1').append('<th colspan="3" class="text-center bg-secondary text-white">정보</th>')
-  $('#davil_tr1').append('<th colspan="7" class="text-center bg-secondary text-white">능력치</th>')
-  $('#davil_tr1').append('<th colspan="7" class="text-center bg-secondary text-white">내성</th>')
-  $('#davil_tr1').append('<th colspan="11" class="text-center bg-secondary text-white">적성</th>')
+  $('#davil_tr1').append('<th colspan="3" class="align-middle text-center bg-secondary text-white">정보</th>')
+  $('#davil_tr1').append('<th colspan="7" class="align-middle text-center bg-secondary text-white">능력치</th>')
+  $('#davil_tr1').append('<th colspan="7" class="align-middle text-center bg-secondary text-white">내성</th>')
+  $('#davil_tr1').append('<th colspan="11" class="align-middle text-center bg-secondary text-white">적성</th>')
 
   titleList.map((title, index) => {
-    $('#davil_tr2').append(`<th class="text-center bg-dark text-white">${title}</th>`)
+    $('#davil_tr2').append(`<th class="align-middle text-center bg-dark text-white">${title}</th>`)
   })
   
   let devilColumns = []
@@ -16,9 +16,9 @@ function initDataTable() {
     }
     
     if(index === 2) {
-      return devilColumns.push({"title": tableTitle, "data": title, 'className': 'text-left',})
+      return devilColumns.push({"title": tableTitle, "data": title, 'className': 'align-middle text-left',})
     }
-    devilColumns.push({"title": tableTitle, "data": title, 'className': 'text-center',})
+    devilColumns.push({"title": tableTitle, "data": title, 'className': 'align-middle text-center',})
   })
 
   $.fn.dataTable.enum(['약', '-', '내', '무', '반', '흡']);
