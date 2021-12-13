@@ -1,4 +1,13 @@
 function initDataTable() {
+  $('#davil_tr1').append('<th colspan="3" class="text-center bg-secondary text-white">정보</th>')
+  $('#davil_tr1').append('<th colspan="7" class="text-center bg-secondary text-white">능력치</th>')
+  $('#davil_tr1').append('<th colspan="7" class="text-center bg-secondary text-white">내성</th>')
+  $('#davil_tr1').append('<th colspan="11" class="text-center bg-secondary text-white">적성</th>')
+
+  titleList.map((title, index) => {
+    $('#davil_tr2').append(`<th class="text-center bg-dark text-white">${title}</th>`)
+  })
+  
   let devilColumns = []
   titleList.map((title, index) => {
     let tableTitle = title
